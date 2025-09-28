@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "traj"
+version = "0.0.1"
+authors = [
+  { name="Andrew Patton", email="anpatt7@gmail.com" },
+]
+description = "Convenience functions and wrappers for working with time series/trajectories. Written primarily for 1D or 2D sports data."
+readme = "README.md"
+license = { file="LICENSE" }
+requires-python = ">=3.12"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "scikit-learn",
+    "scipy",
+    "polars",
+    "datetime",
+    "numpy",
+    "pyyaml"
+]
+
+[project.urls]
+"Homepage" = "https://git-codecommit.us-east-1.amazonaws.com/v1/repos/analytics-gov-py"
