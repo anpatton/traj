@@ -1,14 +1,26 @@
 import numpy as np
-from traj.dist import calc_euclidean_distance
+from traj.dist import calc_distances_mvo, calc_frechet_mvo
 
-# Example with lists
+
+## Lists
 base_list = [1, 2, 3]
-comps_list = [[2, 3, 4], [99, 99, 99]]
-result1 = calc_euclidean_distance(base_list, comps_list)
-print(result1)
+comps_list = [[1, 2, 3], [4, 5, 6], [99, 99, 99]]
+result = calc_distances_mvo(base_vector=base_list, comparison_vectors=comps_list, distance_metric="cosine")
+print(result)
 
-# Example with arrays
+
+base_list = [1, 2, 3]
+comps_list = [[1, 2, 3], [4, 5, 6], [99, 99, 99]]
+result = calc_frechet_mvo(base_vector=base_list, comparison_vectors=comps_list)
+print(result)
+
+## Arrays
 base_array = np.array([1, 2, 3])
-comps_array = [np.array([2, 3, 4]), np.array([99, 99, 99])]
-result2 = calc_euclidean_distance(base_array, comps_array)
-print(result2)
+comps_array = [np.array([1, 2, 3]), np.array([4, 5, 6]), np.array([99, 99, 99])]
+result = calc_distances_mvo(base_vector=base_list, comparison_vectors=comps_list, distance_metric="cosine")
+print(result)
+
+base_array = np.array([1, 2, 3])
+comps_array = [np.array([1, 2, 3]), np.array([4, 5, 6]), np.array([99, 99, 99])]
+result = calc_frechet_mvo(base_vector=base_list, comparison_vectors=comps_list)
+print(result)
