@@ -23,7 +23,8 @@ dependencies = [
     "polars",
     "datetime",
     "numpy",
-    "pyyaml"
+    "pyyaml",
+    "typing",
 ]
 
 [project.urls]
